@@ -1,0 +1,174 @@
+---
+title: "Untitled"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(readxl)
+library(tidyverse)
+library(gt)
+
+```
+
+
+# Kosten des Gesundheitswesens nach Leistungen 
+
+- https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6
+
+# Daten importieren
+
+
+
+```{r}
+library(readxl) # https://readxl.tidyverse.org/
+
+# was sehen wir?
+# read_excel(path = here::here("data/raw/je-d-14.05.01.03.xlsx"))
+
+download.file(url = "https://www.bfs.admin.ch/bfsstatic/dam/assets/14840808/master", 
+              destfile = here::here("data/raw/je-d-14.05.01.03.xlsx"))
+
+gesundheit <- read_excel(path = here::here("data/raw/je-d-14.05.01.03.xlsx"),
+                         skip = 2, 
+                         n_max = 44)
+```
+
+# Daten aufräumen
+
+```{r}
+
+gesundheit_total <- gesundheit %>% 
+  slice(-1) %>% 
+  rename(kategorie_code = ...1,
+         kategorie_name = ...2) %>% 
+  filter(str_length(kategorie_code) == 1) %>% 
+  pivot_longer(cols = !c(kategorie_code, kategorie_name), 
+               names_to = "jahr", 
+               values_to = "mio_chf") %>% 
+  mutate(jahr = as.numeric(jahr))   %>% 
+  mutate(kategorie_name = str_replace(string = kategorie_name,
+                                      # Regular Expression pattern für eine Zahl (d) und die Klammer )
+                                      pattern = " \\d\\)", 
+                                      replacement = "")) 
+
+
+leistungen <- gesundheit_total %>% 
+  select(kategorie_code, kategorie_name) %>% 
+  distinct()
+
+gesundheit_tidy <- gesundheit %>% 
+  slice(-1) %>% 
+  rename(sparte_code = ...1,
+         sparte_name = ...2) %>% 
+  mutate(kategorie_code = case_when(
+    str_length(sparte_code) == 1 ~ sparte_code,
+    TRUE ~ NA_character_
+  )) %>% 
+  relocate(kategorie_code) %>% 
+  fill(kategorie_code) %>% 
+  filter(str_length(sparte_code) > 1) %>% 
+  pivot_longer(cols = !kategorie_code:sparte_name,
+               names_to = "jahr",
+               values_to = "mio_chf", 
+               values_drop_na = TRUE) %>% 
+  mutate(jahr = as.numeric(jahr)) %>% 
+  left_join(leistungen) %>% 
+  mutate(kategorie_name = str_replace(string = kategorie_name,
+                                      # Regular Expression pattern für eine Zahl (d) und die Klammer )
+                                      pattern = " \\d\\)", 
+                                      replacement = "")) %>% 
+  mutate(sparte_name = str_replace(string = sparte_name,
+                                   # Regular Expression pattern für eine Zahl (d) und die Klammer )
+                                   pattern = " \\d\\)", 
+                                   replacement = "")) %>% 
+  relocate(kategorie_name, .after = "kategorie_code") 
+
+```
+
+# Daten visualisieren
+
+```{r}
+
+plot_gesundheit_total <- gesundheit_total %>% 
+  ggplot(aes(x = jahr, y = mio_chf, color = kategorie_name)) +
+  geom_point() +
+  geom_path() +
+  scale_color_brewer(type = "qual") +
+  theme_minimal()
+
+plot_gesundheit_total
+
+plotly::ggplotly(plot_gesundheit_total)
+
+```
+
+# Daten tabellarisch darstellen
+
+```{r}
+
+# Daten eingrenzen 
+gesundheit_sparte_tab <- gesundheit_tidy %>% 
+  filter(jahr >= 2010) %>% 
+  select(-ends_with("code")) %>% 
+  pivot_wider(names_from = "jahr", values_from = "mio_chf") 
+
+# Variablen Namen der Jahreszahlen speichern
+jahr_var <- gesundheit_sparte_tab %>% 
+  select(`2010`:`2018`) %>% 
+  names()
+
+# Tabelle darstellen
+
+# Daten
+gesundheit_sparte_tab %>% 
+  gt(rowname_col = "sparte_name",
+     groupname_col = "kategorie_name") %>% 
+  tab_header(title = "Kosten des Gesundheitswesens nach Leistungen 2010 bis 2018") %>% 
+  tab_spanner(label = "In Millionen Franken",
+              columns = vars(jahr_var)) %>% 
+  fmt_number(columns = vars(jahr_var),
+             decimals = 0,
+             sep_mark =  " ") %>% 
+  tab_source_note(source_note = md("**Quelle:**  Bundesamt für Statistik (BFS) – 
+                                   Kosten und Finanzierung des Gesundheitswesens")) %>% 
+  tab_source_note(source_note = md("**Datenbezug:** [opendata.swiss](https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6)")) %>% 
+  tab_footnote(
+    footnote = "Neuberechnung ab 2010. Retropolation auf Basis bisheriger Wachstumsraten für die Jahre 1995-2009.", 
+    locations = cells_title()) %>% 
+  summary_rows(groups = TRUE,
+               columns = jahr_var,
+               fns = list(Summe = "sum"),
+               formatter = fmt_number,
+               decimals = 0,
+               sep_mark = " ") %>%
+  grand_summary_rows(columns = jahr_var,
+                     fns = list(Total = "sum"),
+                     formatter = fmt_number,
+                     decimals = 0,
+                     sep_mark = " ") %>%
+  tab_options(
+    row_group.background.color = "#E4E7F6",
+    summary_row.background.color = "#DCDCDC",
+    grand_summary_row.background.color = "#808080", 
+  ) 
+
+?grand_summary_rows
+
+
+?summary_rows
+
+#   tab_footnote("Gemeinwirtschaftliche Leistungen in Spitälern werden erst ab Rechnungsjahr 2010 ausgewiesen, vorher sind sie # unter anderen Leistungskategorien (L, N, O, Q) enthalten.", 
+#                locations = cells_stub(rows = 1:3))
+
+
+
+
+```
+
