@@ -1,0 +1,297 @@
+---
+title: "Demonstration 3"
+subtitle: "Kosten des Gesundheitswesen nach Leistungen"
+output: 
+  html_document: 
+    toc: yes
+    toc_float: true
+    highlight: tango
+    theme: lumen
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+
+library(readxl)
+library(tidyverse)
+library(gt)
+
+```
+
+# Daten
+
+Der Datensatz ["Kosten des Gesundheitswesens nach Leistungen"](https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6) wird vom Bundesamt für Statistik (BFS) publiziert als MS Excel Datei [hier publiziert](https://www.bfs.admin.ch/bfs/de/home/statistiken/kataloge-datenbanken/tabellen.assetdetail.14840808.html). Die Daten wurden zuletzt am 31.10.2020 für das Jahr 2018 aktualisiert. Diese und weitere Metadaten sind in der MS Excel Datei ab Reihe 44 zu finden.
+
+# Daten importieren
+
+Wir importieren die Datei in dem wir sie mit der Funkion `download.file()` herunterladen und in dem Ordner "data/raw" innerhalb unseres Projektes speichern. Die URL bezieht sich direkt auf den Download Link. Danach können wir die Daten mit der Funktion `read_excel()` in unsere Arbeitsumgebung importieren.
+
+**R Package `{here}`** 
+
+Das R Package mit dem Namen `here` ist sehr hilfreich im Umgang mit Dateipfaden. Wenn wir in den File Manager unten rechts blicken sehen wir in diesem RStudio Project zwei Ordner:
+
+- analyse
+- data
+
+Die Daten für das Projekt stecken im Ordner 'data'. Die R Markdown Datei für die Analyse steckt im Ordner 'analyse'. Um die Daten aus dem Ordner 'data' zu lesen, müssen die Dateipfade korrekt gesetzt sein. Standardmässig ist der aktuelle Pfad in R Markdown Dateien der Pfad an dem die Datei gespeichert ist, und nicht der Stammpfad des Projektes. Sobald eine R Markdown Datei und die zu importierenden Daten nicht am gleichen Ort liegen, müssen die Pfade angepasst werden.
+
+Pfade unterscheiden sich zwischen Arbeitsgeräten, weshalb es sich nicht empfiehlt einen absoluten Pfad zu setzen, zum Beispiel:
+
+- `read_excel(/Users/work/gitrepos/teaching-starter/demonstration/demo-03-tabellen/data/raw/je-d-14.05.01.03.xlsx)"`
+
+Dieses Skript würde nur auf diesem einen Arbeitsgerät problemlos und der Pfad müsste jeweils angepasst werden. Das `here` Package löst diese Problem mit der Funktion des selben Namen `here()`, welche den Pfad in der jeweiligen Arbeitsumgebung korrekt setzt.
+
+
+```{r}
+
+library(readxl) # https://readxl.tidyverse.org/
+library(here)
+
+# was sehen wir?
+
+download.file(url = "https://www.bfs.admin.ch/bfsstatic/dam/assets/14840808/master", 
+              destfile = here("data/raw/je-d-14.05.01.03.xlsx"))
+
+gesundheit <- read_excel(path = here("data/raw/je-d-14.05.01.03.xlsx"),
+                         skip = 2, 
+                         n_max = 44)
+
+```
+
+# Daten aufräumen
+
+## Kosten als Kategorien (Summe der Sparten)
+
+Hier ist der Code zum Daten aufräumen (Data tidying) bereits geschrieben. Der Code ist als eine lange Code Sequenz geschrieben, in welcher jeder Schritt kommentiert ist. Neu tauchen hier zwei Funktionen aus dem `stringr` Package auf, welches das Arbeiten mit Text unterstützt:
+
+- `str_length()` 
+- `str_replace()`
+
+Um mehr über das Arbeiten mit Text in R zu lernen, siehe hier: 
+
+- https://r4ds.had.co.nz/strings.html
+- https://stringr.tidyverse.org/articles/stringr.html
+
+```{r tidy-total}
+# Starte mit Objekt gesundheit und speicher das Ergebnis als ein Objekt mit dem
+# Namen gesundheit_total in deiner Arbeitsumgebung
+
+gesundheit_total <- gesundheit %>% 
+  
+  # Entferne die erste Zeile
+  slice(-1) %>% 
+  
+  # Geben den ersten beiden Spalten einen neuen Namen
+  rename(kategorie_code = ...1,
+         kategorie_name = ...2) %>% 
+  
+  # Filter alle Werte in der Spalte "kategorie_code", bei welchen die Länge des 
+  # Textes (string) gleich 1 ist
+  filter(str_length(kategorie_code) == 1) %>% 
+  
+  # Bringe die Daten von einem weiten in ein langes Format
+  pivot_longer(cols = !c(kategorie_code, kategorie_name),  # drehe alle bis auf diese zwei Spalten
+               names_to = "jahr",                          # Speicher die Namen in neuer Spalte "jahr"
+               values_to = "mio_chf") %>%                  # Speicher die Werte in neuer Spalgte "mio_chf"
+  
+  # Mache eine Typumwandlung von character Variable auf numerische Varibale
+  mutate(jahr = as.numeric(jahr))   %>% 
+  
+  # Ersetze Text mit einer Zahl und geschlossenen Klammer ')' durch leeren Text
+  mutate(kategorie_name = str_replace(string = kategorie_name,
+                                      # Regular Expression pattern für eine Zahl (d) und die Klammer )
+                                      pattern = " \\d\\)", 
+                                      replacement = ""))
+
+
+# Erstelle einen Tibble für den Code und Namen der Leistungskategorien
+leistungen <- gesundheit_total %>% 
+  select(kategorie_code, kategorie_name) %>% 
+  # Die Funktion distinct stammt aus dem dplyr Package und bewirkt das in einem
+  # Datensatz nur eindeutige Reihen auftauchen (keine Wiederholungen)
+  distinct()
+
+```
+
+## Kosten als Sparten (keine Zusammenfassung)
+
+In diesem Code Chunk sind die einzelnen Schritte zum Säubern von Daten in Untrschritte unterteilt. Dies hilft dabei jeden Schritt als ein einziges kleines Problem anzugehen und unterstützt auch bei einer möglichen Fehlersuche.
+
+```{r tidy-data}
+
+
+# Schritt 1
+ges1 <- gesundheit %>% 
+  slice(-1) %>% 
+  rename(sparte_code = ...1,
+         sparte_name = ...2)
+
+# Schritt 2
+ges2 <- ges1 %>% 
+  mutate(kategorie_code = case_when(
+    str_length(sparte_code) == 1 ~ sparte_code,
+    TRUE ~ NA_character_
+  )) 
+
+# Schritt 3
+ges3 <- ges2 %>% 
+  relocate(kategorie_code) %>% 
+  fill(kategorie_code) 
+
+# Schritt 4
+ges4 <- ges3 %>% 
+  filter(str_length(sparte_code) > 1)
+
+# Schritt 5
+ges5 <- ges4 %>% 
+  pivot_longer(cols = !kategorie_code:sparte_name,
+               names_to = "jahr",
+               values_to = "mio_chf", 
+               values_drop_na = TRUE) %>% 
+  mutate(jahr = as.numeric(jahr))
+
+# Schritt 6
+ges6 <- ges5 %>% 
+  left_join(leistungen) 
+
+# Schritt 7
+ges7 <- ges6 %>% 
+  mutate(sparte_name = str_replace(string = sparte_name,
+                                   # Regular Expression pattern für eine Zahl (d) und die Klammer )
+                                   pattern = " \\d\\)",
+                                   replacement = "")) 
+# Schritt 8
+gesundheit_tidy_ab2010 <- ges7 %>% 
+  relocate(kategorie_name, .after = "kategorie_code")
+
+```
+
+# Was genau passiert in Schritt 7? 
+
+In der original MS Excel Tabelle sind einige Leistungen mit Fussnoten versehen. Diese Zahlen für die Fussnoten tauchen auch wieder auf wenn die Daten importiert werden, jeoch erfüllen sie nicht mehr ihren Zweck, da die eigentlichen Fussnoten fehlen. Die Funktion `str_replace()` ersetzt die Fussnoten mit einem leeren Text. Über die Funktione `str_detect()` können Spalten nach bestimmten Text Kriterien gefiltert werden. Im folgenden Code-chunk ist dies für drei Beispiele dokumentiert.
+
+```{r, eval=FALSE}
+
+# Was passiert in Schritt 7? 
+
+# Beispiel 1
+# Regular expressions- Ein fortgeschrittenes Thema 
+
+# Filter die Spalter sparte_name nach allen Werten welche dem Muster "\\d\\)" 
+# Zum Bespiel: 1) 
+# Mit \d wird eine Zahl identifiziert. Der zweite Backslash erstellt eine 
+# "Escapezeichenfolge" und ist notwendig um das \d nicht als Text zu deuten
+# Mit \\) wird das Zeichen ) identifiziert
+
+ges6 %>% 
+  filter(str_detect(string = sparte_name,
+                    # Regular Expression Muster für eine Zahl (d) und die Klammer )
+                    pattern = "\\d\\)")) 
+
+# Beispiel 2 
+# Filter über die Länge eine strings (Texts)
+
+# Filter die Spalter sparte_code nach Text welcher länger ist als ein Zeichen
+# Zum Beispiel L1 
+
+ges1 %>% 
+  filter(str_length(sparte_code) > 1)
+
+
+# Beispiel 3
+# Filter über einen Teil des Textes
+
+# Filter die Spalte kategorie_name nach Text welcher den String 'pflege' 
+# enthält
+
+gesundheit_total %>% 
+  filter(str_detect(kategorie_name, "pflege"))
+
+```
+
+
+# Daten visualisieren mit `{plotly}
+
+```{r}
+
+library(plotly)
+
+plot_gesundheit_total <- gesundheit_total %>% 
+  mutate(mio_chf = round(mio_chf, 0)) %>% 
+  
+  # Plot mit ggplot erstellen
+  ggplot(aes(x = jahr, y = mio_chf, color = kategorie_name)) +
+  geom_point() +
+  geom_path() +
+  scale_color_brewer(type = "qual") +
+  labs(title = "Kosten des Gesundheitswesens nach Leistungen \nSchweiz, National, 1995 bis 2018",
+       x = "Jahr",
+       y = "Millionen Franken [CHF]",
+       color = "Leistung") +
+  theme_minimal()
+
+ggplotly(plot_gesundheit_total)
+
+```
+
+Für Alle die mehr lernen wollen: https://plotly-r.com/index.html
+
+# Daten tabellarisch darstellen
+
+## Mit dem `{gt}` Package
+
+```{r}
+# Daten eingrenzen 
+gesundheit_sparte_tab <- gesundheit_tidy_ab2010 %>% 
+  select(-ends_with("code")) %>% 
+  pivot_wider(names_from = "jahr", values_from = "mio_chf") 
+
+# Variablen Namen der Jahreszahlen speichern
+jahr_var <- gesundheit_sparte_tab %>% 
+  select(`2010`:`2018`) %>% 
+  names()
+```
+
+
+```{r}
+
+# Tabelle darstellen
+
+# Schritt 1
+gesundheit_sparte_tab %>% 
+  gt(rowname_col = "sparte_name",
+     groupname_col = "kategorie_name") %>% 
+  tab_header(title = "Kosten des Gesundheitswesens nach Leistungen 2010 bis 2018") %>% 
+  tab_spanner(label = "In Millionen Franken",
+              columns = vars(jahr_var)) %>% 
+  fmt_number(columns = vars(jahr_var),
+             decimals = 0,
+             sep_mark =  " ") %>% 
+  tab_source_note(source_note = md("**Quelle:**  Bundesamt für Statistik (BFS) – 
+                                   Kosten und Finanzierung des Gesundheitswesens")) %>% 
+  tab_source_note(source_note = md("**Datenbezug:** 
+                                   [opendata.swiss](https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6)")) %>% 
+  tab_footnote(footnote = "Neuberechnung ab 2010. Retropolation auf Basis bisheriger Wachstumsraten für die Jahre 1995-2009.", 
+               locations = cells_title()) %>% 
+  summary_rows(groups = TRUE,
+               columns = jahr_var,
+               fns = list(Summe = "sum"),
+               formatter = fmt_number,
+               decimals = 0,
+               sep_mark = " ") %>%
+  grand_summary_rows(columns = jahr_var,
+                     fns = list(Total = "sum"),
+                     formatter = fmt_number,
+                     decimals = 0,
+                     sep_mark = " ") %>%
+  tab_options(
+    row_group.background.color = "#E4E7F6",
+    summary_row.background.color = "#DCDCDC",
+    grand_summary_row.background.color = "#808080", 
+  )
+```
