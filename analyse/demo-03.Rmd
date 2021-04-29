@@ -1,25 +1,31 @@
 ---
-title: "Demonstration 3"
-subtitle: "Kosten des Gesundheitswesen nach Leistungen"
+title: "Demonstration 3 - rstatsZH"
+description: |
+  Kosten des Gesundheitswesen nach Leistungen
+author:
+  - name: Lars Schöbitz 
+    url: https://www.lse.de/
+    affiliation: Lars Schöbitz GmbH
+    affiliation_url: https://www.lse.de/
+date: "`r Sys.Date()`"
 output: 
-  html_document: 
-    toc: yes
-    toc_float: true
-    highlight: tango
-    theme: lumen
-editor_options: 
-  chunk_output_type: console
+  distill::distill_article:
+      toc: true
+      toc_float: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
+# Packages laden
+
 ```{r}
 
 library(readxl)
 library(tidyverse)
 library(gt)
+library(plotly)
 
 ```
 
@@ -78,6 +84,7 @@ Um mehr über das Arbeiten mit Text in R zu lernen, siehe hier:
 - https://stringr.tidyverse.org/articles/stringr.html
 
 ```{r tidy-total}
+
 # Starte mit Objekt gesundheit und speicher das Ergebnis als ein Objekt mit dem
 # Namen gesundheit_total in deiner Arbeitsumgebung
 
@@ -124,30 +131,33 @@ In diesem Code Chunk sind die einzelnen Schritte zum Säubern von Daten in Untrs
 
 ```{r tidy-data}
 
-
-# Schritt 1
+# Schritt 1: Spalten umbenennen
 ges1 <- gesundheit %>% 
   slice(-1) %>% 
   rename(sparte_code = ...1,
          sparte_name = ...2)
 
-# Schritt 2
+# Schritt 2: Identifieren wo die Spalte sparte_code einen String (Text) mit 
+# einem Zeichen hat und den jeweiligen Wert in einer neuen Spalte kategorie_code
+# legen.
+
 ges2 <- ges1 %>% 
   mutate(kategorie_code = case_when(
     str_length(sparte_code) == 1 ~ sparte_code,
     TRUE ~ NA_character_
-  )) 
+  )) %>% 
+  relocate(kategorie_code)
 
-# Schritt 3
+# Schritt 3: NAs "auffüllen" in Spalte kategorie_code
 ges3 <- ges2 %>% 
-  relocate(kategorie_code) %>% 
-  fill(kategorie_code) 
+  fill(kategorie_code)    # Neue Funktion aus dem tidyr Package
 
-# Schritt 4
+# Schritt 4: Behalte nur Werte in Spalte sparte_code wo die Länge des 
+# Text-String grösser 1 ist
 ges4 <- ges3 %>% 
   filter(str_length(sparte_code) > 1)
 
-# Schritt 5
+# Schritt 5: Daten aus weitem in ein langes Format bringen
 ges5 <- ges4 %>% 
   pivot_longer(cols = !kategorie_code:sparte_name,
                names_to = "jahr",
@@ -155,11 +165,11 @@ ges5 <- ges4 %>%
                values_drop_na = TRUE) %>% 
   mutate(jahr = as.numeric(jahr))
 
-# Schritt 6
+# Schritt 6: Name der Kategorien über left_join mit Daten zusammenfügen
 ges6 <- ges5 %>% 
   left_join(leistungen) 
 
-# Schritt 7
+# Schritt 7: Fussnoten entfernen die mit Zahl und Klammer identifiziert werden
 ges7 <- ges6 %>% 
   mutate(sparte_name = str_replace(string = sparte_name,
                                    # Regular Expression pattern für eine Zahl (d) und die Klammer )
@@ -202,7 +212,6 @@ ges6 %>%
 ges1 %>% 
   filter(str_length(sparte_code) > 1)
 
-
 # Beispiel 3
 # Filter über einen Teil des Textes
 
@@ -214,18 +223,22 @@ gesundheit_total %>%
 
 ```
 
+# Daten visualisieren 
 
-# Daten visualisieren mit `{plotly}
+## Mit `{ggplot2}` 
 
-```{r}
+```{r, layout = "l-body-outset"}
 
-library(plotly)
+# Daten runden (für plotly)
+gesundheit_total_plot <- gesundheit_total %>% 
+  mutate(mio_chf = round(mio_chf, 0)) 
 
-plot_gesundheit_total <- gesundheit_total %>% 
-  mutate(mio_chf = round(mio_chf, 0)) %>% 
-  
-  # Plot mit ggplot erstellen
-  ggplot(aes(x = jahr, y = mio_chf, color = kategorie_name)) +
+# Plot mit ggplot erstellen
+
+plot_gesundheit <- ggplot(data = gesundheit_total_plot,
+       mapping = aes(x = jahr, 
+                     y = mio_chf, 
+                     color = kategorie_name)) +
   geom_point() +
   geom_path() +
   scale_color_brewer(type = "qual") +
@@ -235,8 +248,14 @@ plot_gesundheit_total <- gesundheit_total %>%
        color = "Leistung") +
   theme_minimal()
 
-ggplotly(plot_gesundheit_total)
+plot_gesundheit
 
+```
+
+## Mit `{plotly}`
+
+```{r, layout = "l-body-outset"}
+ggplotly(plot_gesundheit)
 ```
 
 Für Alle die mehr lernen wollen: https://plotly-r.com/index.html
@@ -258,20 +277,25 @@ jahr_var <- gesundheit_sparte_tab %>%
 ```
 
 
-```{r}
+```{r, layout = "l-page"}
 
 # Tabelle darstellen
 
 # Schritt 1
+
 gesundheit_sparte_tab %>% 
   gt(rowname_col = "sparte_name",
      groupname_col = "kategorie_name") %>% 
+  
   tab_header(title = "Kosten des Gesundheitswesens nach Leistungen 2010 bis 2018") %>% 
+  
   tab_spanner(label = "In Millionen Franken",
               columns = vars(jahr_var)) %>% 
+  
   fmt_number(columns = vars(jahr_var),
              decimals = 0,
-             sep_mark =  " ") %>% 
+             sep_mark =  "'") %>% 
+  
   tab_source_note(source_note = md("**Quelle:**  Bundesamt für Statistik (BFS) – 
                                    Kosten und Finanzierung des Gesundheitswesens")) %>% 
   tab_source_note(source_note = md("**Datenbezug:** 
@@ -283,12 +307,12 @@ gesundheit_sparte_tab %>%
                fns = list(Summe = "sum"),
                formatter = fmt_number,
                decimals = 0,
-               sep_mark = " ") %>%
+               sep_mark = "'") %>%
   grand_summary_rows(columns = jahr_var,
                      fns = list(Total = "sum"),
                      formatter = fmt_number,
                      decimals = 0,
-                     sep_mark = " ") %>%
+                     sep_mark = "'") %>%
   tab_options(
     row_group.background.color = "#E4E7F6",
     summary_row.background.color = "#DCDCDC",
