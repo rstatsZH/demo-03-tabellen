@@ -279,5 +279,49 @@ jahr_var <- gesundheit_sparte_tab %>%
 
 ```{r, layout = "l-page"}
 
+# Tabelle darstellen
 
+# Schritt 1
+
+gesundheit_sparte_tab %>% 
+  gt(rowname_col = "sparte_name",
+     groupname_col = "kategorie_name") %>% 
+  
+  tab_header(title = "Kosten des Gesundheitswesens nach Leistungen 2010 bis 2018") %>% 
+  
+  tab_spanner(label = "In Millionen Franken",
+              columns = vars(jahr_var)) %>% 
+  
+  fmt_number(columns = vars(jahr_var),
+             decimals = 0,
+             sep_mark =  "'") %>% 
+  
+  tab_source_note(source_note = 
+  md("**Quelle:**  Bundesamt für Statistik (BFS) – 
+     Kosten und Finanzierung des Gesundheitswesens")) %>% 
+  
+  tab_source_note(source_note = 
+  md("**Datenbezug:**[opendata.swiss]
+     (https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6)")) %>% 
+  
+  tab_footnote(footnote = "Neuberechnung ab 2010. Retropolation auf Basis 
+               bisheriger Wachstumsraten für die Jahre 1995-2009.", 
+               locations = cells_title()) %>% 
+  
+  summary_rows(groups = TRUE,
+               columns = jahr_var,
+               fns = list(Summe = "sum"),
+               formatter = fmt_number,
+               decimals = 0,
+               sep_mark = "'") %>%
+  
+  grand_summary_rows(columns = jahr_var,
+                     fns = list(Total = "sum"),
+                     formatter = fmt_number,
+                     decimals = 0,
+                     sep_mark = "'") %>%
+  tab_options(
+    row_group.background.color = "#E4E7F6",
+    summary_row.background.color = "#DCDCDC",
+    grand_summary_row.background.color = "#808080")
 ```
