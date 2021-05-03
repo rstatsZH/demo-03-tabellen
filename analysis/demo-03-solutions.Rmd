@@ -325,3 +325,14 @@ gesundheit_sparte_tab %>%
     summary_row.background.color = "#DCDCDC",
     grand_summary_row.background.color = "#808080")
 ```
+
+# Bericht publizieren
+
+1. Öffne GitHub
+2. Zeige wo GitHub Pages publiziert werden können 
+3. Zurück in die Cloud
+4. Ordner zu 'docs' umbenennen
+5. Datei zu index.Rmd umbennen
+6. Render .Rmd
+7. Commit und push
+8. 
