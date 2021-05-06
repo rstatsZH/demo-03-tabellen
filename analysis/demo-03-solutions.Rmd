@@ -290,9 +290,9 @@ gesundheit_sparte_tab %>%
   tab_header(title = "Kosten des Gesundheitswesens nach Leistungen 2010 bis 2018") %>% 
   
   tab_spanner(label = "In Millionen Franken",
-              columns = vars(jahr_var)) %>% 
+              columns = jahr_var) %>% 
   
-  fmt_number(columns = vars(jahr_var),
+  fmt_number(columns = jahr_var,
              decimals = 0,
              sep_mark =  "'") %>% 
   
@@ -326,13 +326,3 @@ gesundheit_sparte_tab %>%
     grand_summary_row.background.color = "#808080")
 ```
 
-# Bericht publizieren
-
-1. Öffne GitHub
-2. Zeige wo GitHub Pages publiziert werden können 
-3. Zurück in die Cloud
-4. Ordner zu 'docs' umbenennen
-5. Datei zu index.Rmd umbennen
-6. Render .Rmd
-7. Commit und push
-8. 
