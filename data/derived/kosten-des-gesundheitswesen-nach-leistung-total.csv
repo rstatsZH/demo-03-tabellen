@@ -1,0 +1,201 @@
+kategorie_code,kategorie_name,jahr,mio_chf
+L,Stationäre Kurativbehandlung,1995,9742.40678273598
+L,Stationäre Kurativbehandlung,1996,10120.6066658035
+L,Stationäre Kurativbehandlung,1997,10166.2077211445
+L,Stationäre Kurativbehandlung,1998,10343.7081333877
+L,Stationäre Kurativbehandlung,1999,10610.1741014755
+L,Stationäre Kurativbehandlung,2000,10786.0847505733
+L,Stationäre Kurativbehandlung,2001,11618.4122759612
+L,Stationäre Kurativbehandlung,2002,12103.6010206969
+L,Stationäre Kurativbehandlung,2003,12454.1445634561
+L,Stationäre Kurativbehandlung,2004,12927.14348202
+L,Stationäre Kurativbehandlung,2005,12583.9834611224
+L,Stationäre Kurativbehandlung,2006,12584.8368060352
+L,Stationäre Kurativbehandlung,2007,13088.7038021048
+L,Stationäre Kurativbehandlung,2008,13957.5346189889
+L,Stationäre Kurativbehandlung,2009,14456.9192751022
+L,Stationäre Kurativbehandlung,2010,13373.4433898019
+L,Stationäre Kurativbehandlung,2011,13582.5490224363
+L,Stationäre Kurativbehandlung,2012,14176.3086875068
+L,Stationäre Kurativbehandlung,2013,14791.1804807463
+L,Stationäre Kurativbehandlung,2014,14947.3663177271
+L,Stationäre Kurativbehandlung,2015,15385.8796586803
+L,Stationäre Kurativbehandlung,2016,15757.9978629662
+L,Stationäre Kurativbehandlung,2017,15718.2839452398
+L,Stationäre Kurativbehandlung,2018,15547.738508
+L,Stationäre Kurativbehandlung,2019,15730.405794
+M,Ambulante Kurativbehandlung,1995,8336.02526495801
+M,Ambulante Kurativbehandlung,1996,8662.06822250044
+M,Ambulante Kurativbehandlung,1997,8865.65765676214
+M,Ambulante Kurativbehandlung,1998,9409.02707050559
+M,Ambulante Kurativbehandlung,1999,9774.15772356238
+M,Ambulante Kurativbehandlung,2000,10243.4617820614
+M,Ambulante Kurativbehandlung,2001,10790.3444525672
+M,Ambulante Kurativbehandlung,2002,11139.3145572951
+M,Ambulante Kurativbehandlung,2003,11535.0103719591
+M,Ambulante Kurativbehandlung,2004,11959.0230662934
+M,Ambulante Kurativbehandlung,2005,12699.2416737384
+M,Ambulante Kurativbehandlung,2006,13059.6977179486
+M,Ambulante Kurativbehandlung,2007,13681.7374104081
+M,Ambulante Kurativbehandlung,2008,14473.2575360721
+M,Ambulante Kurativbehandlung,2009,14989.1256172084
+M,Ambulante Kurativbehandlung,2010,15808.3050807556
+M,Ambulante Kurativbehandlung,2011,16108.7443592999
+M,Ambulante Kurativbehandlung,2012,16924.4865034372
+M,Ambulante Kurativbehandlung,2013,17687.5727694099
+M,Ambulante Kurativbehandlung,2014,18680.7869605899
+M,Ambulante Kurativbehandlung,2015,19541.3569331855
+M,Ambulante Kurativbehandlung,2016,20436.3781929066
+M,Ambulante Kurativbehandlung,2017,21108.1698107523
+M,Ambulante Kurativbehandlung,2018,20753.476298
+M,Ambulante Kurativbehandlung,2019,21414.065104
+N,Rehabilitation,1995,1515.91205390976
+N,Rehabilitation,1996,1586.16227905661
+N,Rehabilitation,1997,1551.96252688235
+N,Rehabilitation,1998,1610.49001240183
+N,Rehabilitation,1999,1633.21915948068
+N,Rehabilitation,2000,1821.72601474725
+N,Rehabilitation,2001,1932.01931612507
+N,Rehabilitation,2002,2063.49225062659
+N,Rehabilitation,2003,2172.10725390037
+N,Rehabilitation,2004,2193.932857694
+N,Rehabilitation,2005,2217.5035438374
+N,Rehabilitation,2006,2328.62299240679
+N,Rehabilitation,2007,2455.55417496708
+N,Rehabilitation,2008,2551.88353447246
+N,Rehabilitation,2009,2757.04373882018
+N,Rehabilitation,2010,2763.52840999174
+N,Rehabilitation,2011,2788.52454318123
+N,Rehabilitation,2012,2833.69710809088
+N,Rehabilitation,2013,2925.4948070062
+N,Rehabilitation,2014,3079.70572813073
+N,Rehabilitation,2015,3378.04048084193
+N,Rehabilitation,2016,3560.31332379345
+N,Rehabilitation,2017,3662.72167172657
+N,Rehabilitation,2018,3822.536102
+N,Rehabilitation,2019,3880.454948
+O,Langzeitpflege,1995,6445.98028373156
+O,Langzeitpflege,1996,6860.93426255513
+O,Langzeitpflege,1997,7110.1376488619
+O,Langzeitpflege,1998,7441.32445094986
+O,Langzeitpflege,1999,7592.80094563687
+O,Langzeitpflege,2000,8029.08608263076
+O,Langzeitpflege,2001,8595.15459880535
+O,Langzeitpflege,2002,9230.25001002522
+O,Langzeitpflege,2003,9553.57197602419
+O,Langzeitpflege,2004,9989.89258225925
+O,Langzeitpflege,2005,10350.5292233745
+O,Langzeitpflege,2006,10464.2420310355
+O,Langzeitpflege,2007,11056.2378071309
+O,Langzeitpflege,2008,11565.6491183193
+O,Langzeitpflege,2009,12171.7985973429
+O,Langzeitpflege,2010,12589.3210340911
+O,Langzeitpflege,2011,13256.770995924
+O,Langzeitpflege,2012,13831.6485306759
+O,Langzeitpflege,2013,14255.1092331416
+O,Langzeitpflege,2014,14627.859634642
+O,Langzeitpflege,2015,15129.3147535283
+O,Langzeitpflege,2016,15448.6643976773
+O,Langzeitpflege,2017,15942.8471865116
+O,Langzeitpflege,2018,16374.288154
+O,Langzeitpflege,2019,16765.907858
+P,Unterstützende Dienstleistungen,1995,1231.22307830805
+P,Unterstützende Dienstleistungen,1996,1252.47835349383
+P,Unterstützende Dienstleistungen,1997,1256.02157512817
+P,Unterstützende Dienstleistungen,1998,1366.36932156149
+P,Unterstützende Dienstleistungen,1999,1409.51217938082
+P,Unterstützende Dienstleistungen,2000,1463.45508709221
+P,Unterstützende Dienstleistungen,2001,1521.59489306311
+P,Unterstützende Dienstleistungen,2002,1564.63948311947
+P,Unterstützende Dienstleistungen,2003,1587.3112306425
+P,Unterstützende Dienstleistungen,2004,1731.49196434383
+P,Unterstützende Dienstleistungen,2005,1828.7350804562
+P,Unterstützende Dienstleistungen,2006,1815.19360574763
+P,Unterstützende Dienstleistungen,2007,1872.85779884575
+P,Unterstützende Dienstleistungen,2008,2008.72853738413
+P,Unterstützende Dienstleistungen,2009,2058.62247065974
+P,Unterstützende Dienstleistungen,2010,3322.21564737497
+P,Unterstützende Dienstleistungen,2011,3716.59290346438
+P,Unterstützende Dienstleistungen,2012,3966.26907114159
+P,Unterstützende Dienstleistungen,2013,4414.05099742906
+P,Unterstützende Dienstleistungen,2014,4766.9374731806
+P,Unterstützende Dienstleistungen,2015,5037.24891526474
+P,Unterstützende Dienstleistungen,2016,5552.55102674288
+P,Unterstützende Dienstleistungen,2017,6028.42572633233
+P,Unterstützende Dienstleistungen,2018,6188.38561
+P,Unterstützende Dienstleistungen,2019,6713.442756
+Q,Gesundheitsgüter,1995,5961.2102313214
+Q,Gesundheitsgüter,1996,6253.80080021417
+Q,Gesundheitsgüter,1997,6559.91002872275
+Q,Gesundheitsgüter,1998,6758.58486993086
+Q,Gesundheitsgüter,1999,7097.79159933983
+Q,Gesundheitsgüter,2000,7453.1940012358
+Q,Gesundheitsgüter,2001,7908.10935391346
+Q,Gesundheitsgüter,2002,8012.94375675961
+Q,Gesundheitsgüter,2003,8526.10671015206
+Q,Gesundheitsgüter,2004,8821.50088195503
+Q,Gesundheitsgüter,2005,8936.26582789637
+Q,Gesundheitsgüter,2006,8878.77814884702
+Q,Gesundheitsgüter,2007,9131.13746143154
+Q,Gesundheitsgüter,2008,9529.88596575826
+Q,Gesundheitsgüter,2009,10014.3114469018
+Q,Gesundheitsgüter,2010,10083.0094429876
+Q,Gesundheitsgüter,2011,10097.6327602297
+Q,Gesundheitsgüter,2012,10181.4614203912
+Q,Gesundheitsgüter,2013,10418.9306739142
+Q,Gesundheitsgüter,2014,10604.0693545149
+Q,Gesundheitsgüter,2015,11100.1143620985
+Q,Gesundheitsgüter,2016,11702.0872408136
+Q,Gesundheitsgüter,2017,12088.3509724838
+Q,Gesundheitsgüter,2018,12213.714292
+Q,Gesundheitsgüter,2019,12377.921308
+R,Prävention,1995,1098.57669529723
+R,Prävention,1996,1120.47366830647
+R,Prävention,1997,1103.74015875535
+R,Prävention,1998,1148.59577348441
+R,Prävention,1999,1208.88083269611
+R,Prävention,2000,1235.41235125566
+R,Prävention,2001,1303.51128285591
+R,Prävention,2002,1339.67781470843
+R,Prävention,2003,1388.79379877591
+R,Prävention,2004,1440.7652560979
+R,Prävention,2005,1440.43069841728
+R,Prävention,2006,1493.83056406586
+R,Prävention,2007,1667.98127862899
+R,Prävention,2008,1749.01497374675
+R,Prävention,2009,1907.81077635705
+R,Prävention,2010,1706.7168791616
+R,Prävention,2011,1695.7503763459
+R,Prävention,2012,1699.65756151999
+R,Prävention,2013,1780.6272988262
+R,Prävention,2014,1852.4359210147
+R,Prävention,2015,1877.56192333847
+R,Prävention,2016,1894.01459928403
+R,Prävention,2017,1937.11686082298
+R,Prävention,2018,2126.108738
+R,Prävention,2019,1809.55849
+S,Verwaltung,1995,1725.01997788258
+S,Verwaltung,1996,1916.15691522762
+S,Verwaltung,1997,1930.72027233633
+S,Verwaltung,1998,1999.09421255656
+S,Verwaltung,1999,2003.66877410353
+S,Verwaltung,2000,2040.04724361578
+S,Verwaltung,2001,2084.84537978285
+S,Verwaltung,2002,2175.31548059371
+S,Verwaltung,2003,2211.47035385097
+S,Verwaltung,2004,2296.76099338417
+S,Verwaltung,2005,2331.45304818998
+S,Verwaltung,2006,2422.42907651111
+S,Verwaltung,2007,2519.57365469697
+S,Verwaltung,2008,2727.40390202162
+S,Verwaltung,2009,2801.61310277643
+S,Verwaltung,2010,2918.43708991678
+S,Verwaltung,2011,2996.12092490596
+S,Verwaltung,2012,2898.90374065801
+S,Verwaltung,2013,2845.06167061004
+S,Verwaltung,2014,2870.05960027811
+S,Verwaltung,2015,2935.12287495567
+S,Verwaltung,2016,3103.20038603346
+S,Verwaltung,2017,3157.09757194484
+S,Verwaltung,2018,3215.551838
+S,Verwaltung,2019,3388.38614

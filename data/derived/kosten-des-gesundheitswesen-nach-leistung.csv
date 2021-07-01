@@ -1,0 +1,341 @@
+kategorie_code,kategorie_name,sparte_code,sparte_name,jahr,mio_chf
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2010,11695.9997843317
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2011,11877.8099372149
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2012,12396.8181867772
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2013,12946.4274922381
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2014,13117.9130116553
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2015,13469.1052856747
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2016,13831.5988933017
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2017,13786.123249488899
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2018,13621.917784
+L,Stationäre Kurativbehandlung,L1,Stationäre somatische Akutbehandlung,2019,13788.090468
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2010,1674.10350003497
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2011,1699.31841557997
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2012,1771.00265154905
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2013,1835.83489527338
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2014,1819.01301588913
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2015,1905.17850924225
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2016,1912.45881368173
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2017,1916.55334854696
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2018,1908.417552
+L,Stationäre Kurativbehandlung,L2,Stationäre Psychiatriebehandlung,2019,1923.633384
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2010,3.34010543523551
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2011,5.42066964140288
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2012,8.4878491805394
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2013,8.91809323487909
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2014,10.4402901826854
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2015,11.5958637633121
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2016,13.9401559828196
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2017,15.6073472039142
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2018,17.403172
+L,Stationäre Kurativbehandlung,L3,Stationäre Geburtshausbehandlung,2019,18.681942
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2010,4225.93091446718
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2011,4315.15963066605
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2012,4716.74431360747
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2013,4968.79079102636
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2014,5426.83429201806
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2015,5676.77480237715
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2016,6135.95086846023
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2017,6306.71992248249
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2018,6409.064246
+M,Ambulante Kurativbehandlung,M2,Ambulante somatische Akutbehandlung im Spital,2019,6614.471852
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2010,4508.86629233193
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2011,4316.53708232043
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2012,4272.83052930258
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2013,4342.72716944276
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2014,4405.46199399932
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2015,4637.76632414008
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2016,4710.68481808089
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2017,4690.29803285633
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2018,3871.118598
+M,Ambulante Kurativbehandlung,M3,"Ärztliche Behandlung, ambulant, Einzelleistungen",2019,3911.953844
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2010,1582.414051889
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2011,1984.44966402436
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2012,2276.54956997707
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2013,2577.61880518742
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2014,2839.31919224484
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2015,3194.75775874077
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2016,3399.81769014593
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2017,3658.84154020722
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2018,3796.97581
+M,Ambulante Kurativbehandlung,M4,"Ärztliche Behandlung, ambulant, Managed Care",2019,4094.315628
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2010,4022.40696199847
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2011,4089.38697733899
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2012,4171.15559942542
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2013,4251.45983904736
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2014,4347.15814442975
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2015,4279.40498026518
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2016,4255.54831963476
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2017,4472.52576730564
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2018,4683.780512
+M,Ambulante Kurativbehandlung,M6,Zahnbehandlung,2019,4819.308934
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2010,863.67623159321
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2011,854.48419895565
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2012,922.551838219065
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2013,986.618200232554
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2014,1120.81748802153
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2015,1169.42770961477
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2016,1262.6931496913
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2017,1301.03918920024
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2018,1390.834674
+M,Ambulante Kurativbehandlung,M7,"Ambulante Psychiatrie- und Psychologiebehandlung, kurativ",2019,1409.380012
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2010,53.0750547236819
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2011,57.7178273326868
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2012,61.2966793134125
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2013,64.8189945211423
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2014,72.8578984678846
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2015,83.5785045205275
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2016,105.671600883804
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2017,115.952675071741
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2018,125.03902
+M,Ambulante Kurativbehandlung,M8,"Ambulante Geburtshilfe, ambulante Geburtshausbehandlung",2019,132.270074
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2010,551.935573752162
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2011,491.008978661708
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2012,503.357973592202
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2013,495.538969952328
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2014,468.337951408488
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2015,499.646853527036
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2016,566.011746009672
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2017,562.792683628672
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2018,476.663438
+M,Ambulante Kurativbehandlung,M9,Andere kurative Therapien,2019,432.36476
+N,Rehabilitation,N1,Stationäre Rehabilitation,2010,1692.27067789851
+N,Rehabilitation,N1,Stationäre Rehabilitation,2011,1698.07208204693
+N,Rehabilitation,N1,Stationäre Rehabilitation,2012,1695.33281419683
+N,Rehabilitation,N1,Stationäre Rehabilitation,2013,1719.39381005313
+N,Rehabilitation,N1,Stationäre Rehabilitation,2014,1678.47781427771
+N,Rehabilitation,N1,Stationäre Rehabilitation,2015,1817.12152647991
+N,Rehabilitation,N1,Stationäre Rehabilitation,2016,1832.79265983242
+N,Rehabilitation,N1,Stationäre Rehabilitation,2017,1833.50671671616
+N,Rehabilitation,N1,Stationäre Rehabilitation,2018,1891.563972
+N,Rehabilitation,N1,Stationäre Rehabilitation,2019,1829.957096
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2010,1071.25773209323
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2011,1090.4524611343
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2012,1138.36429389405
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2013,1206.10099695307
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2014,1401.22791385302
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2015,1560.91895436202
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2016,1727.52066396103
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2017,1829.21495501041
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2018,1930.97213
+N,Rehabilitation,N3,"Ambulante Rehabilitation, nicht-psychosomatisch",2019,2050.497852
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2010,10952.0777169758
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2011,11491.4945458708
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2012,11949.6355179721
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2013,12263.7398220033
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2014,12548.209649845
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2015,12872.7730119602
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2016,13031.1711236166
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2017,13376.373464263601
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2018,13673.888144
+O,Langzeitpflege,O1,Langzeitpflege in Institutionen,2019,13905.473906
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2010,1637.24331711535
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2011,1765.27645005316
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2012,1882.01301270387
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2013,1991.36941113827
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2014,2079.64998479702
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2015,2256.54174156806
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2016,2417.49327406072
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2017,2566.47372224803
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2018,2700.40001
+O,Langzeitpflege,O2,"Häusliche Langzeitpflege, engerer Sinn: Pflege",2019,2860.433952
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2010,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2011,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2012,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2013,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2014,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2015,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2016,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2017,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2018,0
+O,Langzeitpflege,O3,"Häusliche Langzeitpflege, weiterer Sinn: Haushalt etc.",2019,0
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2010,1024.80291238866
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2011,1102.5586462129
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2012,1131.40255208649
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2013,1318.81737898559
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2014,1455.31637094221
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2015,1558.80233375147
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2016,1716.87344465149
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2017,1871.23172907782
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2018,1938.64383
+P,Unterstützende Dienstleistungen,P1,Laboranalysen,2019,1990.121094
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2010,303.927580359753
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2011,334.381168967501
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2012,346.357130144234
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2013,401.086225985003
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2014,406.376273880002
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2015,438.047965395003
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2016,464.895146097503
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2017,460.340290337504
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2018,476.049582
+P,Unterstützende Dienstleistungen,P2,Transport und Rettung,2019,499.09585
+P,Unterstützende Dienstleistungen,P3,Radiologie,2010,765.735215573654
+P,Unterstützende Dienstleistungen,P3,Radiologie,2011,798.834215733362
+P,Unterstützende Dienstleistungen,P3,Radiologie,2012,843.378217576215
+P,Unterstützende Dienstleistungen,P3,Radiologie,2013,951.195138590254
+P,Unterstützende Dienstleistungen,P3,Radiologie,2014,1040.16681148172
+P,Unterstützende Dienstleistungen,P3,Radiologie,2015,1061.00457768922
+P,Unterstützende Dienstleistungen,P3,Radiologie,2016,1110.00934285165
+P,Unterstützende Dienstleistungen,P3,Radiologie,2017,1132.39660831101
+P,Unterstützende Dienstleistungen,P3,Radiologie,2018,993.035446
+P,Unterstützende Dienstleistungen,P3,Radiologie,2019,1090.24471
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2010,754.370591530296
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2011,736.235794441777
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2012,852.00557359032
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2013,931.397849112556
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2014,924.787974689366
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2015,985.866747912737
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2016,1124.95631722217
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2017,1158.62889359776
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2018,1236.681098
+P,Unterstützende Dienstleistungen,P4,Gemeinwirtschaftliche Leistung: Lehre und Forschung,2019,1260.392212
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2010,473.379347522607
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2011,744.583078108837
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2012,793.125597744326
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2013,811.554404755657
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2014,940.290042187296
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2015,993.52729051631
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2016,1135.81677592006
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2017,1405.82820500823
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2018,1543.975654
+P,Unterstützende Dienstleistungen,P5,Gemeinwirtschaftliche Leistung: Sonstige,2019,1873.58889
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2010,571.567703229929
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2011,555.61454848612
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2012,520.2606861932
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2013,517.681273925078
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2014,478.186202550653
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2015,503.280921012721
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2016,506.521136999757
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2017,511.22381599907
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2018,531.415592
+Q,Gesundheitsgüter,Q1,"Medikamente, stationär",2019,520.077144
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2010,5398.8621271539
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2011,5490.43146828153
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2012,5632.46895842675
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2013,5702.32758951647
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2014,5801.08683600342
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2015,6106.11970132763
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2016,6508.46695411003
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2017,6907.19964417709
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2018,6860.182532
+Q,Gesundheitsgüter,Q2,"Medikamente, ambulant, verschreibungspflichtig",2019,7042.956636
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2010,1663.61703918826
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2011,1677.77563610207
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2012,1695.28989996522
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2013,1776.68688386623
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2014,1789.20562283489
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2015,1900.05163897414
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2016,2030.27939082949
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2017,1998.5070924819
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2018,2078.030132
+Q,Gesundheitsgüter,Q3,"Medikamente, ambulant, frei verkäuflich",2019,2089.446836
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2010,635.182030587045
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2011,635.212573994474
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2012,651.397699903806
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2013,679.444021441261
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2014,704.214257411847
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2015,696.305291773646
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2016,699.580068042191
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2017,671.550764798194
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2018,763.298176
+Q,Gesundheitsgüter,Q4,Verbrauchsprodukte,2019,636.582592
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2010,1813.78054282849
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2011,1738.59853336547
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2012,1682.04417590219
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2013,1742.79090516517
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2014,1831.37643571409
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2015,1894.35680901038
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2016,1957.23969083214
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2017,1999.86965502752
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2018,1980.78786
+Q,Gesundheitsgüter,Q5,Therapeutische Apparate,2019,2088.8581
+R,Prävention,R01,Primärprävention: Sucht,2010,286.74169831
+R,Prävention,R01,Primärprävention: Sucht,2011,269.96650682
+R,Prävention,R01,Primärprävention: Sucht,2012,278.27673456
+R,Prävention,R01,Primärprävention: Sucht,2013,319.70371074
+R,Prävention,R01,Primärprävention: Sucht,2014,313.07327551
+R,Prävention,R01,Primärprävention: Sucht,2015,330.47018132
+R,Prävention,R01,Primärprävention: Sucht,2016,307.76649168
+R,Prävention,R01,Primärprävention: Sucht,2017,321.71902852
+R,Prävention,R01,Primärprävention: Sucht,2018,439.64842
+R,Prävention,R01,Primärprävention: Sucht,2019,180.271626
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2010,184.04009973
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2011,179.43294501
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2012,172.76992252
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2013,173.3331867
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2014,171.44482976
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2015,167.38424377
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2016,180.62796774
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2017,182.90391551
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2018,181.93545
+R,Prävention,R02,"Primärprävention: Psychische Gesundheit, Schulgesundheit",2019,180.252134
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2010,120.318
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2011,138.218823529412
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2012,129.675294117647
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2013,129.86588235294099
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2014,128.062352941176
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2015,129.051764705882
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2016,127.629411764706
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2017,121.138823529412
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2018,136.644706
+R,Prävention,R03,Primärprävention: Unfälle und Verletzungen,2019,112.26353
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2010,171.6228899
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2011,171.35682746
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2012,169.4942141
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2013,170.16763101
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2014,175.08293752
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2015,180.19505345
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2016,187.84712422
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2017,157.37756033
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2018,152.127668
+R,Prävention,R04,Primärprävention: Lebensmittelsicherheit,2019,157.290034
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2010,193.205403365121
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2011,170.56108675
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2012,168.725019803687
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2013,169.59913753
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2014,173.38540685
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2015,173.26541789
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2016,185.87563985
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2017,233.1806076
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2018,267.407084
+R,Prävention,R05,Primärprävention: Aufklärung der Bevölkerung/Zielgruppen,2019,269.404624
+R,Prävention,R10,andere Prävention,2010,750.788787856481
+R,Prävention,R10,andere Prävention,2011,766.214186776487
+R,Prävention,R10,andere Prävention,2012,780.716376418654
+R,Prävention,R10,andere Prävention,2013,817.957750493261
+R,Prävention,R10,andere Prävention,2014,891.387118433526
+R,Prävention,R10,andere Prävention,2015,897.195262202587
+R,Prävention,R10,andere Prävention,2016,904.267964029326
+R,Prävention,R10,andere Prävention,2017,920.796925333567
+R,Prävention,R10,andere Prävention,2018,948.34541
+R,Prävention,R10,andere Prävention,2019,910.076542
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2010,494.43830504
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2011,508.83782772
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2012,494.66089819
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2013,497.4190104
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2014,476.83621647
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2015,472.59772133
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2016,493.05696108
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2017,514.76649727
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2018,521.945852
+S,Verwaltung,S1,Verwaltung öffentliches Gesundheitswesen,2019,591.407532
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2010,1578.87991917873
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2011,1657.7307970058
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2012,1739.45150977099
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2013,1790.0503967685
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2014,1809.19764483242
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2015,1832.34380464095
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2016,1942.26824900028
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2017,1960.8368073359
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2018,1951.70549
+S,Verwaltung,S2,Verwaltung Sozialversicherungen,2019,2021.238768
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2010,845.118865698055
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2011,829.552300180154
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2012,664.791332697014
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2013,557.592263441536
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2014,584.025738975692
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2015,630.181348984714
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2016,667.875175953176
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2017,681.494267338942
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2018,741.900496
+S,Verwaltung,S3,Verwaltung Privatversicherungen,2019,775.73984
