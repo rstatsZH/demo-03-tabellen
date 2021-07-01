@@ -12,6 +12,8 @@ output:
   distill::distill_article:
       toc: true
       toc_float: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +33,7 @@ library(plotly)
 
 # Daten
 
-Der Datensatz ["Kosten des Gesundheitswesens nach Leistungen"](https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6) wird vom Bundesamt für Statistik (BFS) publiziert als MS Excel Datei [hier publiziert](https://www.bfs.admin.ch/bfs/de/home/statistiken/kataloge-datenbanken/tabellen.assetdetail.14840808.html). Die Daten wurden zuletzt am 31.10.2020 für das Jahr 2018 aktualisiert. Diese und weitere Metadaten sind in der MS Excel Datei ab Reihe 44 zu finden.
+Der Datensatz ["Kosten des Gesundheitswesens nach Leistungen"](https://opendata.swiss/de/dataset/kosten-des-gesundheitswesens-nach-leistungen6) wird vom Bundesamt für Statistik (BFS) publiziert als MS Excel Datei [hier publiziert](https://www.bfs.admin.ch/bfs/de/home/statistiken/kataloge-datenbanken/tabellen.assetdetail.14840808.html). Die Daten wurden zuletzt am 27.04.2021 für das Jahr 2019 aktualisiert. Diese und weitere Metadaten sind in der MS Excel Datei ab Reihe 44 zu finden.
 
 # Daten importieren
 
@@ -60,7 +62,7 @@ library(here)
 
 # was sehen wir?
 
-download.file(url = "https://www.bfs.admin.ch/bfsstatic/dam/assets/14840808/master", 
+download.file(url = "https://www.bfs.admin.ch/bfsstatic/dam/assets/16944799/master", 
               destfile = here("data/raw/je-d-14.05.01.03.xlsx"))
 
 gesundheit <- read_excel(path = here("data/raw/je-d-14.05.01.03.xlsx"),
@@ -106,6 +108,11 @@ gesundheit_total <- gesundheit %>%
                names_to = "jahr",                          # Speicher die Namen in neuer Spalte "jahr"
                values_to = "mio_chf") %>%                  # Speicher die Werte in neuer Spalgte "mio_chf"
   
+  # Ersetze das p für provisorisch in der Jahresangabe für 2019
+  mutate(jahr = str_replace(string = jahr,
+                            pattern = "p",
+                            replacement = "")) %>% 
+  
   # Mache eine Typumwandlung von character Variable auf numerische Varibale
   mutate(jahr = as.numeric(jahr))   %>% 
   
@@ -124,6 +131,15 @@ leistungen <- gesundheit_total %>%
   distinct()
 
 ```
+
+### Daten als CSV speichern
+
+```{r}
+
+write_csv(gesundheit_total, file = here("data/derived/kosten-des-gesundheitswesen-nach-leistung-summen.csv"))
+
+```
+
 
 ## Kosten als Sparten (keine Zusammenfassung)
 
@@ -163,6 +179,10 @@ ges5 <- ges4 %>%
                names_to = "jahr",
                values_to = "mio_chf", 
                values_drop_na = TRUE) %>% 
+  # Ersetze das p für provisorisch in der Jahresangabe für 2019
+  mutate(jahr = str_replace(string = jahr,
+                            pattern = "p",
+                            replacement = "")) %>% 
   mutate(jahr = as.numeric(jahr))
 
 # Schritt 6: Name der Kategorien über left_join mit Daten zusammenfügen
@@ -180,6 +200,15 @@ gesundheit_tidy_ab2010 <- ges7 %>%
   relocate(kategorie_name, .after = "kategorie_code")
 
 ```
+
+### Daten als CSV speichern
+
+```{r}
+
+write_csv(gesundheit_tidy_ab2010, file = here("data/derived/kosten-des-gesundheitswesen-nach-leistung.csv"))
+
+```
+
 
 # Was genau passiert in Schritt 7? 
 
